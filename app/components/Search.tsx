@@ -1,21 +1,25 @@
 'use client'
 
 import { useState, FormEvent } from "react"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 
 export default function Search () {
     const [search, setSearch] = useState('')
     const router = useRouter()
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+        // prevent reload
         event.preventDefault()
+        // reset search term
         setSearch('')
+        // set the route to the new page with the name of the search term
         router.push(`/${search}/`)
-        // pushes rout onto page address
     }
 
+    // no action value
+    // class names from TW
     return (
         <form
-            className="w-50 justify-center md:justify-between"
+            className="w-50 flex justify-center md:justify-between"
             onSubmit={handleSubmit}>
             <input type="text"
                 value={search}
