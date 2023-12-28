@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className='bg-slate-800'>
         <Navbar/>
-        <h1>Main layout page</h1>
+        {children}
       </body>
     </html>
   )
