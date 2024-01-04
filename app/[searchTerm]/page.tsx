@@ -22,7 +22,7 @@ export default async function SearchResults ({ params: { searchTerm } }: Props) 
                             { JSON.stringify(result) }
                         </p>
                     })
-                    : <h2 className="p-2 text-white text-xl">{`${searchTerm} Not Found`}</h2>
+                    : <h2 className="p-2 text-xl">{`${searchTerm} Not Found`}</h2>
                     }
         </div>
     )
